@@ -1,1 +1,6 @@
-
+app:
+  name: FileBackup
+  monitor:
+    source-path: /Users/zhangyun/test/source
+    target-path: /Users/zhangyun/test/target
+    interval: 3000
