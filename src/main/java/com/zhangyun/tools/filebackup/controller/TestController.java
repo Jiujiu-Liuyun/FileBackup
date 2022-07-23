@@ -1,9 +1,8 @@
 package com.zhangyun.tools.filebackup.controller;
 
 import com.zhangyun.tools.filebackup.annotation.Timer;
-import com.zhangyun.tools.filebackup.aspect.TimerTest;
+import com.zhangyun.tools.filebackup.aspect.AspectTest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @Autowired
-    private TimerTest timerTest;
+    private AspectTest timerTest;
 
     @RequestMapping(value = "/timerTest", method = RequestMethod.GET)
     public void timerTest() throws InterruptedException {
@@ -32,6 +31,12 @@ public class TestController {
     public String test() throws InterruptedException {
         Thread.sleep(2000);
         return "test";
+    }
+
+    @RequestMapping(value = "/exceptionHandlerTest", method = RequestMethod.GET)
+    public String exceptionHandlerTest() throws BootstrapMethodError {
+        timerTest.testExceptionHandler();
+        return "exceptionHandlerTest";
     }
 
 }

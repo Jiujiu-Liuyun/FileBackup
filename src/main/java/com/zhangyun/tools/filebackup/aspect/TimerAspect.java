@@ -1,5 +1,6 @@
 package com.zhangyun.tools.filebackup.aspect;
 
+import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -14,15 +15,16 @@ import org.springframework.stereotype.Component;
  */
 @Aspect
 @Component
+@Slf4j
 public class TimerAspect {
 
     @Around("@annotation(com.zhangyun.tools.filebackup.annotation.Timer)")
-    public Object methodTimer(ProceedingJoinPoint pj) throws Throwable {
+    public Object methodTimer(ProceedingJoinPoint jp) throws Throwable {
         long start = System.currentTimeMillis();
-        Object object = pj.proceed();
+        Object object = jp.proceed();
         long cost = System.currentTimeMillis() - start;
 
-        System.out.println("method cost time: " + (cost / 1000.0) + "s");
+        log.info("method cost time: {}s", (cost / 1000));
         return object;
     }
 

@@ -13,8 +13,6 @@ public class FileBackupApplication {
     public static void main(String[] args) {
         SpringApplication.run(FileBackupApplication.class, args);
         log.info("服务启动成功！");
-        log.warn("this is warn message!");
-        log.error("this is warn message!");
     }
 
 }

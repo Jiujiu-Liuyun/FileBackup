@@ -23,9 +23,15 @@ public class FBFileService {
      * @throws IOException
      */
     public void fileCopy(File source, File target) throws IOException {
-        FileUtils.copyFile(source, target);
+        try {
+            FileUtils.copyFile(source, target);
+        } catch (IOException ioe) {
+            throw new IOException("复制文件异常");
+        }
     }
 
+    public void fileDelete(File target) {
 
+    }
 
 }

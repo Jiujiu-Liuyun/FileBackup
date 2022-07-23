@@ -1,7 +1,8 @@
 package com.zhangyun.tools.filebackup.aspect;
 
+import com.zhangyun.tools.filebackup.annotation.FBExceptionHandler;
 import com.zhangyun.tools.filebackup.annotation.Timer;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.zhangyun.tools.filebackup.exception.BlankArgumentsException;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,11 +13,16 @@ import org.springframework.stereotype.Service;
  * @since: 1.0
  */
 @Service
-public class TimerTest {
+public class AspectTest {
 
     @Timer
     public void test () throws InterruptedException {
         Thread.sleep(1234);
+    }
+
+    @FBExceptionHandler
+    public String testExceptionHandler () throws BlankArgumentsException {
+        throw new BlankArgumentsException();
     }
 
 }
