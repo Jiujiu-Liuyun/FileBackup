@@ -1,14 +1,12 @@
 package com.zhangyun.tools.filebackup.monitor;
 
-import com.zhangyun.tools.filebackup.property.FileMonitorProperty;
-import org.apache.commons.io.filefilter.FileFilterUtils;
+import com.zhangyun.tools.filebackup.property.FBFileMonitorProperty;
 import org.apache.commons.io.monitor.FileAlterationListenerAdaptor;
 import org.apache.commons.io.monitor.FileAlterationMonitor;
 import org.apache.commons.io.monitor.FileAlterationObserver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 
 /**
@@ -19,13 +17,13 @@ import org.springframework.stereotype.Service;
  * @since: 1.0
  */
 @Service
-public class FileMonitor implements ApplicationRunner {
+public class FBFileMonitor implements ApplicationRunner {
 
     @Autowired
     private FileAlterationListenerAdaptor listener;    // 事件处理类对象
 
     @Autowired
-    private FileMonitorProperty monitorProperty;
+    private FBFileMonitorProperty monitorProperty;
 
     /***
      * 开启监听
@@ -60,6 +58,6 @@ public class FileMonitor implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        start();
+//        start();
     }
 }

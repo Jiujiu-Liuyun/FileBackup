@@ -1,4 +1,4 @@
-package com.zhangyun.tools.filebackup.adaptor;
+package com.zhangyun.tools.filebackup.monitor;
 
 import org.apache.commons.io.monitor.FileAlterationListenerAdaptor;
 import org.apache.commons.io.monitor.FileAlterationObserver;
@@ -14,7 +14,7 @@ import java.io.File;
  * @since: 1.0
  */
 @Service
-public class FileListenerAdaptor extends FileAlterationListenerAdaptor {
+public class FBFileAlterationListenerAdaptor extends FileAlterationListenerAdaptor {
 
     @Override
     public void onFileChange(File file) {

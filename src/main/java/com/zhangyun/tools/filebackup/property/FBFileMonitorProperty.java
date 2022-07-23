@@ -2,8 +2,6 @@ package com.zhangyun.tools.filebackup.property;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
 
 /**
  * description:
@@ -14,7 +12,7 @@ import org.springframework.stereotype.Component;
  */
 @ConfigurationProperties(prefix = "app.monitor")
 @Data
-public class FileMonitorProperty {
+public class FBFileMonitorProperty {
 
     private String sourcePath;
 
