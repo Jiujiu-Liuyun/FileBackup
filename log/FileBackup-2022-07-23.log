@@ -1,0 +1,110 @@
+2022-07-23 21:07:40.217 [INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication                                                 ] Starting FileBackupApplication using Java 11.0.15 on zhangyundeMacBook-Air.local with PID 10171 (/Users/zhangyun/Documents/javaProject/FileBackup/target/classes started by zhangyun in /Users/zhangyun/Documents/javaProject/FileBackup)
+2022-07-23 21:07:40.219 [INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication                                                 ] No active profile set, falling back to 1 default profile: "default"
+2022-07-23 21:07:40.583 [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer                                        ] Tomcat initialized with port(s): 8081 (http)
+2022-07-23 21:07:40.587 [INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol                                                          ] Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-23 21:07:40.587 [INFO ] [main] [org.apache.catalina.core.StandardService                                                            ] Starting service [Tomcat]
+2022-07-23 21:07:40.587 [INFO ] [main] [org.apache.catalina.core.StandardEngine                                                             ] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-23 21:07:40.621 [INFO ] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]                                     ] Initializing Spring embedded WebApplicationContext
+2022-07-23 21:07:40.621 [INFO ] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext                     ] Root WebApplicationContext: initialization completed in 384 ms
+2022-07-23 21:07:40.777 [INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol                                                          ] Starting ProtocolHandler ["http-nio-8081"]
+2022-07-23 21:07:40.790 [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer                                        ] Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-23 21:07:40.795 [INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication                                                 ] Started FileBackupApplication in 0.791 seconds (JVM running for 1.299)
+2022-07-23 21:07:40.796 [INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication                                                 ] 服务启动成功！
+2022-07-23 21:15:49.547 [INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication                                                 ] Starting FileBackupApplication using Java 11.0.15 on zhangyundeMacBook-Air.local with PID 10304 (/Users/zhangyun/Documents/javaProject/FileBackup/target/classes started by zhangyun in /Users/zhangyun/Documents/javaProject/FileBackup)
+2022-07-23 21:15:49.548 [INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication                                                 ] No active profile set, falling back to 1 default profile: "default"
+2022-07-23 21:15:50.293 [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer                                        ] Tomcat initialized with port(s): 8081 (http)
+2022-07-23 21:15:50.299 [INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol                                                          ] Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-23 21:15:50.300 [INFO ] [main] [org.apache.catalina.core.StandardService                                                            ] Starting service [Tomcat]
+2022-07-23 21:15:50.300 [INFO ] [main] [org.apache.catalina.core.StandardEngine                                                             ] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-23 21:15:50.355 [INFO ] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]                                     ] Initializing Spring embedded WebApplicationContext
+2022-07-23 21:15:50.355 [INFO ] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext                     ] Root WebApplicationContext: initialization completed in 771 ms
+2022-07-23 21:15:50.584 [INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol                                                          ] Starting ProtocolHandler ["http-nio-8081"]
+2022-07-23 21:15:50.601 [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer                                        ] Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-23 21:15:50.608 [INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication                                                 ] Started FileBackupApplication in 1.335 seconds (JVM running for 1.643)
+2022-07-23 21:15:50.610 [INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication                                                 ] 服务启动成功！
+2022-07-23 21:18:42.734 [INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication                                                 ] Starting FileBackupApplication using Java 11.0.15 on zhangyundeMacBook-Air.local with PID 10309 (/Users/zhangyun/Documents/javaProject/FileBackup/target/classes started by zhangyun in /Users/zhangyun/Documents/javaProject/FileBackup)
+2022-07-23 21:18:42.737 [INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication                                                 ] No active profile set, falling back to 1 default profile: "default"
+2022-07-23 21:18:43.252 [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer                                        ] Tomcat initialized with port(s): 8081 (http)
+2022-07-23 21:18:43.256 [INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol                                                          ] Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-23 21:18:43.257 [INFO ] [main] [org.apache.catalina.core.StandardService                                                            ] Starting service [Tomcat]
+2022-07-23 21:18:43.257 [INFO ] [main] [org.apache.catalina.core.StandardEngine                                                             ] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-23 21:18:43.289 [INFO ] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]                                     ] Initializing Spring embedded WebApplicationContext
+2022-07-23 21:18:43.289 [INFO ] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext                     ] Root WebApplicationContext: initialization completed in 486 ms
+2022-07-23 21:18:43.427 [INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol                                                          ] Starting ProtocolHandler ["http-nio-8081"]
+2022-07-23 21:18:43.438 [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer                                        ] Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-23 21:18:43.443 [INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication                                                 ] Started FileBackupApplication in 1.001 seconds (JVM running for 1.391)
+2022-07-23 21:18:43.444 [INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication                                                 ] 服务启动成功！
+2022-07-23 21:23:37.366 [INFO ] [main] [c.z.t.f.FileBackupApplication ] Starting FileBackupApplication using Java 11.0.15 on zhangyundeMacBook-Air.local with PID 10334 (/Users/zhangyun/Documents/javaProject/FileBackup/target/classes started by zhangyun in /Users/zhangyun/Documents/javaProject/FileBackup)
+2022-07-23 21:23:37.368 [INFO ] [main] [c.z.t.f.FileBackupApplication ] No active profile set, falling back to 1 default profile: "default"
+2022-07-23 21:23:37.703 [INFO ] [main] [o.s.b.w.e.t.TomcatWebServer   ] Tomcat initialized with port(s): 8081 (http)
+2022-07-23 21:23:37.706 [INFO ] [main] [o.a.c.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-23 21:23:37.706 [INFO ] [main] [o.a.c.core.StandardService    ] Starting service [Tomcat]
+2022-07-23 21:23:37.706 [INFO ] [main] [o.a.c.core.StandardEngine     ] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-23 21:23:37.737 [INFO ] [main] [o.a.c.c.C.[.[localhost].[/]   ] Initializing Spring embedded WebApplicationContext
+2022-07-23 21:23:37.737 [INFO ] [main] [letWebServerApplicationContext] Root WebApplicationContext: initialization completed in 353 ms
+2022-07-23 21:23:37.892 [INFO ] [main] [o.a.c.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8081"]
+2022-07-23 21:23:37.903 [INFO ] [main] [o.s.b.w.e.t.TomcatWebServer   ] Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-23 21:23:37.909 [INFO ] [main] [c.z.t.f.FileBackupApplication ] Started FileBackupApplication in 0.784 seconds (JVM running for 1.126)
+2022-07-23 21:23:37.911 [INFO ] [main] [c.z.t.f.FileBackupApplication ] 服务启动成功！
+2022-07-23 21:23:59.203 [INFO ] [main] [logger] Starting FileBackupApplication using Java 11.0.15 on zhangyundeMacBook-Air.local with PID 10339 (/Users/zhangyun/Documents/javaProject/FileBackup/target/classes started by zhangyun in /Users/zhangyun/Documents/javaProject/FileBackup)
+2022-07-23 21:23:59.205 [INFO ] [main] [logger] No active profile set, falling back to 1 default profile: "default"
+2022-07-23 21:23:59.531 [INFO ] [main] [logger] Tomcat initialized with port(s): 8081 (http)
+2022-07-23 21:23:59.535 [INFO ] [main] [logger] Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-23 21:23:59.535 [INFO ] [main] [logger] Starting service [Tomcat]
+2022-07-23 21:23:59.535 [INFO ] [main] [logger] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-23 21:23:59.562 [INFO ] [main] [logger] Initializing Spring embedded WebApplicationContext
+2022-07-23 21:23:59.562 [INFO ] [main] [logger] Root WebApplicationContext: initialization completed in 338 ms
+2022-07-23 21:23:59.703 [INFO ] [main] [logger] Starting ProtocolHandler ["http-nio-8081"]
+2022-07-23 21:23:59.714 [INFO ] [main] [logger] Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-23 21:23:59.720 [INFO ] [main] [logger] Started FileBackupApplication in 0.716 seconds (JVM running for 1.008)
+2022-07-23 21:23:59.721 [INFO ] [main] [logger] 服务启动成功！
+2022-07-23 21:24:22.008 [INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] Starting FileBackupApplication using Java 11.0.15 on zhangyundeMacBook-Air.local with PID 10343 (/Users/zhangyun/Documents/javaProject/FileBackup/target/classes started by zhangyun in /Users/zhangyun/Documents/javaProject/FileBackup)
+2022-07-23 21:24:22.011 [INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] No active profile set, falling back to 1 default profile: "default"
+2022-07-23 21:24:22.409 [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8081 (http)
+2022-07-23 21:24:22.412 [INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-23 21:24:22.412 [INFO ] [main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2022-07-23 21:24:22.412 [INFO ] [main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-23 21:24:22.442 [INFO ] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2022-07-23 21:24:22.442 [INFO ] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 400 ms
+2022-07-23 21:24:22.591 [INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8081"]
+2022-07-23 21:24:22.602 [INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-23 21:24:22.608 [INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] Started FileBackupApplication in 0.89 seconds (JVM running for 1.178)
+2022-07-23 21:24:22.608 [INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] 服务启动成功！
+2022-07-23 21:24:42.829 [INFO ] [main] [c.z.t.f.FileBackupApplication ] Starting FileBackupApplication using Java 11.0.15 on zhangyundeMacBook-Air.local with PID 10347 (/Users/zhangyun/Documents/javaProject/FileBackup/target/classes started by zhangyun in /Users/zhangyun/Documents/javaProject/FileBackup)
+2022-07-23 21:24:42.830 [INFO ] [main] [c.z.t.f.FileBackupApplication ] No active profile set, falling back to 1 default profile: "default"
+2022-07-23 21:24:43.163 [INFO ] [main] [o.s.b.w.e.t.TomcatWebServer   ] Tomcat initialized with port(s): 8081 (http)
+2022-07-23 21:24:43.166 [INFO ] [main] [o.a.c.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-23 21:24:43.166 [INFO ] [main] [o.a.c.core.StandardService    ] Starting service [Tomcat]
+2022-07-23 21:24:43.166 [INFO ] [main] [o.a.c.core.StandardEngine     ] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-23 21:24:43.197 [INFO ] [main] [o.a.c.c.C.[.[localhost].[/]   ] Initializing Spring embedded WebApplicationContext
+2022-07-23 21:24:43.197 [INFO ] [main] [letWebServerApplicationContext] Root WebApplicationContext: initialization completed in 347 ms
+2022-07-23 21:24:43.348 [INFO ] [main] [o.a.c.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8081"]
+2022-07-23 21:24:43.359 [INFO ] [main] [o.s.b.w.e.t.TomcatWebServer   ] Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-23 21:24:43.365 [INFO ] [main] [c.z.t.f.FileBackupApplication ] Started FileBackupApplication in 0.739 seconds (JVM running for 1.014)
+2022-07-23 21:24:43.366 [INFO ] [main] [c.z.t.f.FileBackupApplication ] 服务启动成功！
+2022-07-23 21:47:26.107 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] Starting FileBackupApplication using Java 11.0.15 on zhangyundeMacBook-Air.local with PID 10422 (/Users/zhangyun/Documents/javaProject/FileBackup/target/classes started by zhangyun in /Users/zhangyun/Documents/javaProject/FileBackup)
+2022-07-23 21:47:26.108 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] No active profile set, falling back to 1 default profile: "default"
+2022-07-23 21:47:26.470 [ INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8081 (http)
+2022-07-23 21:47:26.473 [ INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-23 21:47:26.473 [ INFO ] [main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2022-07-23 21:47:26.473 [ INFO ] [main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-23 21:47:26.503 [ INFO ] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2022-07-23 21:47:26.503 [ INFO ] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 380 ms
+2022-07-23 21:47:26.659 [ INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8081"]
+2022-07-23 21:47:26.671 [ INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-23 21:47:26.678 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] Started FileBackupApplication in 0.754 seconds (JVM running for 1.192)
+2022-07-23 21:47:26.679 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] 服务启动成功！
+2022-07-23 21:49:11.505 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] Starting FileBackupApplication using Java 11.0.15 on zhangyundeMacBook-Air.local with PID 10434 (/Users/zhangyun/Documents/javaProject/FileBackup/target/classes started by zhangyun in /Users/zhangyun/Documents/javaProject/FileBackup)
+2022-07-23 21:49:11.506 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] No active profile set, falling back to 1 default profile: "default"
+2022-07-23 21:49:11.843 [ INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8081 (http)
+2022-07-23 21:49:11.847 [ INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-23 21:49:11.847 [ INFO ] [main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2022-07-23 21:49:11.847 [ INFO ] [main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-23 21:49:11.878 [ INFO ] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2022-07-23 21:49:11.879 [ INFO ] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 355 ms
+2022-07-23 21:49:12.010 [ INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8081"]
+2022-07-23 21:49:12.021 [ INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-23 21:49:12.027 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] Started FileBackupApplication in 0.764 seconds (JVM running for 1.01)
+2022-07-23 21:49:12.027 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] 服务启动成功！
+2022-07-23 21:49:12.027 [ WARN ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] this is warn message!
+2022-07-23 21:49:12.027 [ ERROR ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] this is warn message!
