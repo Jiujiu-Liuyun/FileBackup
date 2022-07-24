@@ -4,7 +4,7 @@ app:
     source-path: /Users/zhangyun/test/source
     target-path: /Users/zhangyun/test/target
     interval: 3000
-    ignore-file: .DS_Store
+    ignore-file-list: .DS_Store
 
 server:
   port: 8081

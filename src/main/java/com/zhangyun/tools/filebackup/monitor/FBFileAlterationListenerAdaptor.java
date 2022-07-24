@@ -1,6 +1,7 @@
 package com.zhangyun.tools.filebackup.monitor;
 
 import cn.hutool.core.util.ObjectUtil;
+import com.zhangyun.tools.filebackup.annotation.FBFileFilter;
 import com.zhangyun.tools.filebackup.annotation.TraceLog;
 import com.zhangyun.tools.filebackup.property.FBFileMonitorProperty;
 import com.zhangyun.tools.filebackup.service.FBFileService;
@@ -28,16 +29,11 @@ public class FBFileAlterationListenerAdaptor extends FileAlterationListenerAdapt
     @Autowired
     private FBFileService fileService;
 
-    @Autowired
-    private FBFileMonitorProperty property;
-
     @Override
     @TraceLog
+    @FBFileFilter
     public void onFileChange(File source) {
         try {
-            if (ObjectUtil.equal(source.getName(), property.getIgnoreFile())) {
-                return;
-            }
             File target = fileService.sourceMapToTarget(source);
             fileService.fileCopy(source,target);
             super.onFileChange(source);
@@ -48,11 +44,9 @@ public class FBFileAlterationListenerAdaptor extends FileAlterationListenerAdapt
 
     @Override
     @TraceLog
+    @FBFileFilter
     public void onFileCreate(File source) {
         try {
-            if (ObjectUtil.equal(source.getName(), property.getIgnoreFile())) {
-                return;
-            }
             File target = fileService.sourceMapToTarget(source);
             fileService.fileCopy(source,target);
             super.onFileCreate(source);
@@ -63,11 +57,9 @@ public class FBFileAlterationListenerAdaptor extends FileAlterationListenerAdapt
 
     @Override
     @TraceLog
+    @FBFileFilter
     public void onFileDelete(File source) {
         try {
-            if (ObjectUtil.equal(source.getName(), property.getIgnoreFile())) {
-                return;
-            }
             File target = fileService.sourceMapToTarget(source);
             fileService.fileAndDirDelete(target);
             super.onFileDelete(source);
@@ -78,11 +70,9 @@ public class FBFileAlterationListenerAdaptor extends FileAlterationListenerAdapt
 
     @Override
     @TraceLog
+    @FBFileFilter
     public void onDirectoryCreate(File source) {
         try {
-            if (ObjectUtil.equal(source.getName(), property.getIgnoreFile())) {
-                return;
-            }
             File target = fileService.sourceMapToTarget(source);
             fileService.dirCopy(source, target);
             super.onDirectoryCreate(source);
@@ -93,14 +83,9 @@ public class FBFileAlterationListenerAdaptor extends FileAlterationListenerAdapt
 
     @Override
     @TraceLog
+    @FBFileFilter
     public void onDirectoryDelete(File source) {
         try {
-            if (ObjectUtil.equal(source.getName(), property.getIgnoreFile())) {
-                return;
-            }
-            if (ObjectUtil.equal(source.getName(), property.getIgnoreFile())) {
-                return;
-            }
             File target = fileService.sourceMapToTarget(source);
             fileService.fileAndDirDelete(target);
             super.onDirectoryCreate(source);

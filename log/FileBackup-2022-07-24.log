@@ -3817,3 +3817,82 @@ com.zhangyun.tools.filebackup.exception.BlankArgumentsException: null
 2022-07-24 17:54:42.691 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.monitor.FBFileAlterationListenerAdaptor.onFileChange[/Users/zhangyun/test/source/.DS_Store]
 2022-07-24 17:54:51.719 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.monitor.FBFileAlterationListenerAdaptor.onFileChange[/Users/zhangyun/test/source/.DS_Store]
 2022-07-24 17:54:51.719 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.monitor.FBFileAlterationListenerAdaptor.onFileChange[/Users/zhangyun/test/source/demo/.DS_Store]
+2022-07-24 19:51:47.909 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] Starting FileBackupApplication using Java 11.0.15 on zhangyundeMacBook-Air.local with PID 6500 (/Users/zhangyun/Documents/javaProject/FileBackup/target/classes started by zhangyun in /Users/zhangyun/Documents/javaProject/FileBackup)
+2022-07-24 19:51:47.910 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] No active profile set, falling back to 1 default profile: "default"
+2022-07-24 19:51:48.321 [ INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8081 (http)
+2022-07-24 19:51:48.325 [ INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-24 19:51:48.325 [ INFO ] [main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2022-07-24 19:51:48.325 [ INFO ] [main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-24 19:51:48.361 [ INFO ] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2022-07-24 19:51:48.362 [ INFO ] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 437 ms
+2022-07-24 19:51:48.605 [ INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8081"]
+2022-07-24 19:51:48.620 [ INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-24 19:51:48.627 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] Started FileBackupApplication in 0.938 seconds (JVM running for 1.389)
+2022-07-24 19:51:48.642 [ INFO ] [main] [com.zhangyun.tools.filebackup.monitor.FBFileMonitor] File Monitor启动成功！
+2022-07-24 19:51:48.643 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] 服务启动成功！
+2022-07-24 19:53:00.945 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.monitor.FBFileAlterationListenerAdaptor.onFileChange[/Users/zhangyun/test/source/.DS_Store]
+2022-07-24 19:53:00.947 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.service.FBFileService.sourceMapToTarget[/Users/zhangyun/test/source/.DS_Store]
+2022-07-24 19:53:00.951 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.service.FBFileService] /Users/zhangyun/test/source/.DS_Store 已被映射到 /Users/zhangyun/test/target/.DS_Store
+2022-07-24 19:53:00.951 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.service.FBFileService.fileCopy[/Users/zhangyun/test/source/.DS_Store, /Users/zhangyun/test/target/.DS_Store]
+2022-07-24 19:53:00.968 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.service.FBFileService] 文件/Users/zhangyun/test/source/.DS_Store 已被复制到 文件/Users/zhangyun/test/target/.DS_Store
+2022-07-24 19:53:00.969 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.monitor.FBFileAlterationListenerAdaptor.onFileChange[/Users/zhangyun/test/source/demo/.DS_Store]
+2022-07-24 19:53:00.969 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.service.FBFileService.sourceMapToTarget[/Users/zhangyun/test/source/demo/.DS_Store]
+2022-07-24 19:53:00.969 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.service.FBFileService] /Users/zhangyun/test/source/demo/.DS_Store 已被映射到 /Users/zhangyun/test/target/demo/.DS_Store
+2022-07-24 19:53:00.970 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.service.FBFileService.fileCopy[/Users/zhangyun/test/source/demo/.DS_Store, /Users/zhangyun/test/target/demo/.DS_Store]
+2022-07-24 19:53:00.971 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.service.FBFileService] 文件/Users/zhangyun/test/source/demo/.DS_Store 已被复制到 文件/Users/zhangyun/test/target/demo/.DS_Store
+2022-07-24 19:53:06.996 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.monitor.FBFileAlterationListenerAdaptor.onFileCreate[/Users/zhangyun/test/source/demo/src/.DS_Store]
+2022-07-24 19:53:06.996 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.service.FBFileService.sourceMapToTarget[/Users/zhangyun/test/source/demo/src/.DS_Store]
+2022-07-24 19:53:06.996 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.service.FBFileService] /Users/zhangyun/test/source/demo/src/.DS_Store 已被映射到 /Users/zhangyun/test/target/demo/src/.DS_Store
+2022-07-24 19:53:06.996 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.service.FBFileService.fileCopy[/Users/zhangyun/test/source/demo/src/.DS_Store, /Users/zhangyun/test/target/demo/src/.DS_Store]
+2022-07-24 19:53:06.997 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.service.FBFileService] 文件/Users/zhangyun/test/source/demo/src/.DS_Store 已被复制到 文件/Users/zhangyun/test/target/demo/src/.DS_Store
+2022-07-24 19:53:06.998 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.monitor.FBFileAlterationListenerAdaptor.onFileCreate[/Users/zhangyun/test/source/demo/src/main/.DS_Store]
+2022-07-24 19:53:06.998 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.service.FBFileService.sourceMapToTarget[/Users/zhangyun/test/source/demo/src/main/.DS_Store]
+2022-07-24 19:53:06.998 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.service.FBFileService] /Users/zhangyun/test/source/demo/src/main/.DS_Store 已被映射到 /Users/zhangyun/test/target/demo/src/main/.DS_Store
+2022-07-24 19:53:06.998 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.service.FBFileService.fileCopy[/Users/zhangyun/test/source/demo/src/main/.DS_Store, /Users/zhangyun/test/target/demo/src/main/.DS_Store]
+2022-07-24 19:53:06.998 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.service.FBFileService] 文件/Users/zhangyun/test/source/demo/src/main/.DS_Store 已被复制到 文件/Users/zhangyun/test/target/demo/src/main/.DS_Store
+2022-07-24 19:54:04.185 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] Starting FileBackupApplication using Java 11.0.15 on zhangyundeMacBook-Air.local with PID 6527 (/Users/zhangyun/Documents/javaProject/FileBackup/target/classes started by zhangyun in /Users/zhangyun/Documents/javaProject/FileBackup)
+2022-07-24 19:54:04.186 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] No active profile set, falling back to 1 default profile: "default"
+2022-07-24 19:54:04.605 [ INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8081 (http)
+2022-07-24 19:54:04.609 [ INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-24 19:54:04.609 [ INFO ] [main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2022-07-24 19:54:04.609 [ INFO ] [main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-24 19:54:04.642 [ INFO ] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2022-07-24 19:54:04.642 [ INFO ] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 441 ms
+2022-07-24 19:54:04.866 [ INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8081"]
+2022-07-24 19:54:04.879 [ INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-24 19:54:04.885 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] Started FileBackupApplication in 0.894 seconds (JVM running for 1.311)
+2022-07-24 19:54:04.895 [ INFO ] [main] [com.zhangyun.tools.filebackup.monitor.FBFileMonitor] File Monitor启动成功！
+2022-07-24 19:54:04.896 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] 服务启动成功！
+2022-07-24 19:54:07.914 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.monitor.FBFileAlterationListenerAdaptor.onFileChange[/Users/zhangyun/test/source/demo/.DS_Store]
+2022-07-24 19:54:22.964 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.monitor.FBFileAlterationListenerAdaptor.onFileChange[/Users/zhangyun/test/source/demo/.DS_Store]
+2022-07-24 19:54:22.970 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.monitor.FBFileAlterationListenerAdaptor.onFileChange[/Users/zhangyun/test/source/demo/src/main/.DS_Store]
+2022-07-24 19:54:25.982 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.monitor.FBFileAlterationListenerAdaptor.onFileChange[/Users/zhangyun/test/source/demo/src/main/.DS_Store]
+2022-07-24 19:55:08.148 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.monitor.FBFileAlterationListenerAdaptor.onFileChange[/Users/zhangyun/test/source/demo/.DS_Store]
+2022-07-24 19:55:08.152 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.monitor.FBFileAlterationListenerAdaptor.onFileChange[/Users/zhangyun/test/source/demo/src/main/.DS_Store]
+2022-07-24 19:55:08.153 [ INFO ] [Thread-1] [com.zhangyun.tools.filebackup.aspect.TraceLogAspect] 执行了方法：com.zhangyun.tools.filebackup.monitor.FBFileAlterationListenerAdaptor.onFileCreate[/Users/zhangyun/test/source/demo/src/main/java/.DS_Store]
+2022-07-24 19:55:30.548 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] Starting FileBackupApplication using Java 11.0.15 on zhangyundeMacBook-Air.local with PID 6544 (/Users/zhangyun/Documents/javaProject/FileBackup/target/classes started by zhangyun in /Users/zhangyun/Documents/javaProject/FileBackup)
+2022-07-24 19:55:30.549 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] No active profile set, falling back to 1 default profile: "default"
+2022-07-24 19:55:30.936 [ INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8081 (http)
+2022-07-24 19:55:30.939 [ INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-24 19:55:30.940 [ INFO ] [main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2022-07-24 19:55:30.940 [ INFO ] [main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-24 19:55:30.973 [ INFO ] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2022-07-24 19:55:30.973 [ INFO ] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 403 ms
+2022-07-24 19:55:31.195 [ INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8081"]
+2022-07-24 19:55:31.207 [ INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-24 19:55:31.213 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] Started FileBackupApplication in 0.871 seconds (JVM running for 1.15)
+2022-07-24 19:55:31.221 [ INFO ] [main] [com.zhangyun.tools.filebackup.monitor.FBFileMonitor] File Monitor启动成功！
+2022-07-24 19:55:31.222 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] 服务启动成功！
+2022-07-24 20:05:55.789 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] Starting FileBackupApplication using Java 11.0.15 on zhangyundeMacBook-Air.local with PID 6598 (/Users/zhangyun/Documents/javaProject/FileBackup/target/classes started by zhangyun in /Users/zhangyun/Documents/javaProject/FileBackup)
+2022-07-24 20:05:55.790 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] No active profile set, falling back to 1 default profile: "default"
+2022-07-24 20:05:56.168 [ INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8081 (http)
+2022-07-24 20:05:56.172 [ INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8081"]
+2022-07-24 20:05:56.172 [ INFO ] [main] [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2022-07-24 20:05:56.172 [ INFO ] [main] [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-07-24 20:05:56.203 [ INFO ] [main] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2022-07-24 20:05:56.203 [ INFO ] [main] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 398 ms
+2022-07-24 20:05:56.411 [ INFO ] [main] [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8081"]
+2022-07-24 20:05:56.422 [ INFO ] [main] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-24 20:05:56.428 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] Started FileBackupApplication in 0.837 seconds (JVM running for 1.243)
+2022-07-24 20:05:56.436 [ INFO ] [main] [com.zhangyun.tools.filebackup.monitor.FBFileMonitor] File Monitor启动成功！
+2022-07-24 20:05:56.436 [ INFO ] [main] [com.zhangyun.tools.filebackup.FileBackupApplication] 服务启动成功！

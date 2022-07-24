@@ -7,6 +7,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 /**
@@ -19,6 +20,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 @Slf4j
+@Order(20)
 public class TraceLogAspect {
 
     @Before("@annotation(com.zhangyun.tools.filebackup.annotation.TraceLog)")
