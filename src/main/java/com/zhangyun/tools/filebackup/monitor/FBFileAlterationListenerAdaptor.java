@@ -1,6 +1,8 @@
 package com.zhangyun.tools.filebackup.monitor;
 
+import cn.hutool.core.util.ObjectUtil;
 import com.zhangyun.tools.filebackup.annotation.TraceLog;
+import com.zhangyun.tools.filebackup.property.FBFileMonitorProperty;
 import com.zhangyun.tools.filebackup.service.FBFileService;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -26,10 +28,16 @@ public class FBFileAlterationListenerAdaptor extends FileAlterationListenerAdapt
     @Autowired
     private FBFileService fileService;
 
+    @Autowired
+    private FBFileMonitorProperty property;
+
     @Override
     @TraceLog
     public void onFileChange(File source) {
         try {
+            if (ObjectUtil.equal(source.getName(), property.getIgnoreFile())) {
+                return;
+            }
             File target = fileService.sourceMapToTarget(source);
             fileService.fileCopy(source,target);
             super.onFileChange(source);
@@ -42,6 +50,9 @@ public class FBFileAlterationListenerAdaptor extends FileAlterationListenerAdapt
     @TraceLog
     public void onFileCreate(File source) {
         try {
+            if (ObjectUtil.equal(source.getName(), property.getIgnoreFile())) {
+                return;
+            }
             File target = fileService.sourceMapToTarget(source);
             fileService.fileCopy(source,target);
             super.onFileCreate(source);
@@ -54,6 +65,9 @@ public class FBFileAlterationListenerAdaptor extends FileAlterationListenerAdapt
     @TraceLog
     public void onFileDelete(File source) {
         try {
+            if (ObjectUtil.equal(source.getName(), property.getIgnoreFile())) {
+                return;
+            }
             File target = fileService.sourceMapToTarget(source);
             fileService.fileAndDirDelete(target);
             super.onFileDelete(source);
@@ -66,6 +80,9 @@ public class FBFileAlterationListenerAdaptor extends FileAlterationListenerAdapt
     @TraceLog
     public void onDirectoryCreate(File source) {
         try {
+            if (ObjectUtil.equal(source.getName(), property.getIgnoreFile())) {
+                return;
+            }
             File target = fileService.sourceMapToTarget(source);
             fileService.dirCopy(source, target);
             super.onDirectoryCreate(source);
@@ -78,31 +95,18 @@ public class FBFileAlterationListenerAdaptor extends FileAlterationListenerAdapt
     @TraceLog
     public void onDirectoryDelete(File source) {
         try {
+            if (ObjectUtil.equal(source.getName(), property.getIgnoreFile())) {
+                return;
+            }
+            if (ObjectUtil.equal(source.getName(), property.getIgnoreFile())) {
+                return;
+            }
             File target = fileService.sourceMapToTarget(source);
             fileService.fileAndDirDelete(target);
             super.onDirectoryCreate(source);
         } catch (Exception e) {
             log.error("源目录 {} 创建，目标目录创建发生错误， {}", source, e.getMessage(), e);
         }
-    }
-
-
-    @Override
-    public void onStart(FileAlterationObserver observer) {
-//        System.out.println("start");
-        super.onStart(observer);
-    }
-
-    @Override
-    public void onStop(FileAlterationObserver observer) {
-//        System.out.println("stop");
-        super.onStop(observer);
-    }
-
-    @Override
-    @TraceLog
-    public void onDirectoryChange(File source) {
-        super.onDirectoryChange(source);
     }
 
 }

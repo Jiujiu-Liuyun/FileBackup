@@ -18,6 +18,7 @@ import javax.websocket.server.PathParam;
  */
 @RestController
 @RequestMapping("/test")
+@Deprecated
 public class TestController {
 
     @Autowired

@@ -1,11 +1,17 @@
 package com.zhangyun.tools.filebackup.filevisitor;
 
+import cn.hutool.core.util.ObjectUtil;
 import com.zhangyun.tools.filebackup.annotation.Timer;
+import com.zhangyun.tools.filebackup.annotation.TraceLog;
+import com.zhangyun.tools.filebackup.exception.BlankArgumentsException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.nio.file.FileVisitResult;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 
@@ -17,6 +23,7 @@ import java.nio.file.attribute.BasicFileAttributes;
  * @since: 1.0
  */
 @Service
+@Slf4j
 public class CounterFileVisitor extends SimpleFileVisitor {
 
     private Long dirCounter = 0L;
@@ -60,5 +67,21 @@ public class CounterFileVisitor extends SimpleFileVisitor {
 
     public void setFileCounter(Long fileCounter) {
         this.fileCounter = fileCounter;
+    }
+
+    /**
+     * 文件和文件夹计数器
+     * @param path
+     * @throws IOException
+     */
+    @TraceLog
+    public void getFileAndDirCounter(String path) throws IOException {
+        if (ObjectUtil.isEmpty(path)) {
+            log.error("文件目录计数器异常，路径位为空： {}", path);
+            throw new BlankArgumentsException("空参数异常！");
+        }
+        setFileCounter(0L);
+        setDirCounter(0L);
+        Files.walkFileTree(Paths.get(path), this);
     }
 }

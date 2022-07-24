@@ -4,7 +4,9 @@ import cn.hutool.core.util.ObjectUtil;
 import com.zhangyun.tools.filebackup.annotation.TraceLog;
 import com.zhangyun.tools.filebackup.exception.BlankArgumentsException;
 import com.zhangyun.tools.filebackup.exception.FBBusinessException;
+import com.zhangyun.tools.filebackup.filevisitor.CounterFileVisitor;
 import com.zhangyun.tools.filebackup.property.FBFileMonitorProperty;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +14,10 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.FileVisitResult;
+import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
+import java.nio.file.Paths;
 
 /**
  * description:
@@ -27,6 +32,10 @@ public class FBFileService {
 
     @Autowired
     private FBFileMonitorProperty monitorProperty;
+
+    @Autowired
+    private CounterFileVisitor counterFileVisitor;
+
 
     /**
      * 复制文件，同时复制文件的最后修改时间

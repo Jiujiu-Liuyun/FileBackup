@@ -32,7 +32,7 @@ public class CounterFileVisitorController {
     @Timer
     public String counterFile(@PathParam("path") String path)
             throws InterruptedException, IOException {
-        Files.walkFileTree(Paths.get(path), counterFileVisitor);
+        counterFileVisitor.getFileAndDirCounter(path);
 
         return "查询完毕! fileCounter: " + counterFileVisitor.getFileCounter()
                 + ", dirCounter: " + counterFileVisitor.getDirCounter();

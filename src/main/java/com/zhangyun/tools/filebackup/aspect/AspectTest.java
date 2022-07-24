@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
  * @since: 1.0
  */
 @Service
+@Deprecated
 public class AspectTest {
 
     @Timer

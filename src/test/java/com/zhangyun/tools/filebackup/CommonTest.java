@@ -35,10 +35,13 @@ public class CommonTest {
 //        System.out.println(Arrays.toString(file.list()));
 //        System.out.println(Arrays.toString(file.listFiles()));
 
-        File source = new File("/Users/zhangyun/test/source/dirc/socks");
-        File target = new File("/Users/zhangyun/test/target/dirc/socks");
+//        File source = new File("/Users/zhangyun/test/source/dirc/socks");
+//        File target = new File("/Users/zhangyun/test/target/dirc/socks");
+//
+//        FileUtils.copyDirectory(source,target);
 
-        FileUtils.copyDirectory(source,target);
+        File file = new File("/Users/zhangyun/test/source/demo/.DS_Store");
+        System.out.println(file.getName());
     }
 
     @Test

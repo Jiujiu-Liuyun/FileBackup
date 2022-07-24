@@ -20,4 +20,6 @@ public class FBFileMonitorProperty {
 
     private Integer interval;
 
+    private String ignoreFile;
+
 }
