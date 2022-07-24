@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.websocket.server.PathParam;
+
 /**
  * description:
  *
@@ -34,8 +36,9 @@ public class TestController {
     }
 
     @RequestMapping(value = "/exceptionHandlerTest", method = RequestMethod.GET)
-    public String exceptionHandlerTest() throws BootstrapMethodError {
-        timerTest.testExceptionHandler();
+    public String exceptionHandlerTest(@PathParam("str") String str)
+            throws BootstrapMethodError {
+        timerTest.testExceptionHandler(str);
         return "exceptionHandlerTest";
     }
 
