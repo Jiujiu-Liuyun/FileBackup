@@ -2,6 +2,8 @@ package com.zhangyun.tools.filebackup.exception;
 
 import lombok.Data;
 
+import java.util.Map;
+
 /**
  * description:
  *
@@ -23,9 +25,15 @@ public class FBException extends RuntimeException{
     public FBException(String message, Integer code) {
         super();
         this.code = code;
+        this.message = message;
     }
 
     public FBException(Integer code) {
         this.code = code;
     }
+
+    public FBException(String message) {
+        this.message = message;
+    }
+
 }

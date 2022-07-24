@@ -19,4 +19,8 @@ public class BlankArgumentsException extends FBException {
     public BlankArgumentsException(Integer code) {
         super(code);
     }
+
+    public BlankArgumentsException(String message) {
+        super(message);
+    }
 }

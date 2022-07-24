@@ -17,13 +17,16 @@ import org.springframework.stereotype.Service;
 public class AspectTest {
 
     @Timer
-    public void test () throws InterruptedException {
+    public void test() throws InterruptedException {
         Thread.sleep(1234);
     }
 
-    @FBExceptionHandler
     @TraceLog
-    public String testExceptionHandler (String str) throws BlankArgumentsException {
+    public void testExceptionHandler(String str) {
+        tt();
+    }
+
+    public void tt() {
         throw new BlankArgumentsException();
     }
 

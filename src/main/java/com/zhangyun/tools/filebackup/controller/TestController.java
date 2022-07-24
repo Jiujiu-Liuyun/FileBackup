@@ -36,8 +36,7 @@ public class TestController {
     }
 
     @RequestMapping(value = "/exceptionHandlerTest", method = RequestMethod.GET)
-    public String exceptionHandlerTest(@PathParam("str") String str)
-            throws BootstrapMethodError {
+    public String exceptionHandlerTest(@PathParam("str") String str) {
         timerTest.testExceptionHandler(str);
         return "exceptionHandlerTest";
     }

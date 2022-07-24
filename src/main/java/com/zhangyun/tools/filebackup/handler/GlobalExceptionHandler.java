@@ -1,5 +1,7 @@
 package com.zhangyun.tools.filebackup.handler;
 
+import com.zhangyun.tools.filebackup.response.GlobalResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -13,11 +15,13 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  */
 @RestControllerAdvice
 @Component
+@Slf4j
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = { Exception.class })
-    public String exception() {
-        return "出异常了，全局异常处理";
+    public GlobalResponse exception(Exception e) {
+        log.error("发生异常 {}",e.getMessage(), e);
+        return GlobalResponse.fail(e.getMessage());
     }
 
 }

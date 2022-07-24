@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 
@@ -22,9 +23,15 @@ import java.util.Arrays;
 @Aspect
 @Component
 @Slf4j
+@Deprecated
 public class GlobalExceptionHandlerAspect {
 
-    @Around("@annotation(com.zhangyun.tools.filebackup.annotation.FBExceptionHandler)")
+    @Pointcut("execution(* com.zhangyun.tools.filebackup..*.*(..)) " +
+            "&& @annotation(com.zhangyun.tools.filebackup.annotation.FBExceptionHandler)")
+    public void pointcut() {
+    }
+
+    @Around("pointcut()")
     public Object exceptionHandler(ProceedingJoinPoint jp) throws Throwable {
         try {
             return jp.proceed();
@@ -37,7 +44,7 @@ public class GlobalExceptionHandlerAspect {
                     JoinPointUtils.getMethodDetails(jp), iae.getMessage(), iae);
             throw iae;
         } catch (Throwable e) {
-            log.error("执行{}，发生未知异常! error message {}",
+            log.error("执行{}，发生异常! error message {}",
                     JoinPointUtils.getMethodDetails(jp), e.getMessage(), e);
             throw e;
         }
