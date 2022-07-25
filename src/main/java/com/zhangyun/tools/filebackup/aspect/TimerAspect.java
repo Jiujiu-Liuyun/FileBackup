@@ -1,9 +1,11 @@
 package com.zhangyun.tools.filebackup.aspect;
 
+import com.zhangyun.tools.filebackup.util.JoinPointUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
@@ -20,13 +22,19 @@ import org.springframework.stereotype.Component;
 @Order(0)
 public class TimerAspect {
 
-    @Around("@annotation(com.zhangyun.tools.filebackup.annotation.Timer)")
+    @Pointcut("@annotation(com.zhangyun.tools.filebackup.annotation.Timer) && " +
+            "execution(* com.zhangyun.tools.filebackup..*.*(..))")
+    public void pointcut() {
+    }
+
+    @Around("pointcut()")
     public Object methodTimer(ProceedingJoinPoint jp) throws Throwable {
         long start = System.currentTimeMillis();
         Object object = jp.proceed();
         long cost = System.currentTimeMillis() - start;
 
-        log.info("method cost time: {}s", (cost / 1000));
+        String methodDetails = JoinPointUtils.getMethodDetails(jp);
+        log.info("method {} cost time: {}s", methodDetails, (cost / 1000.0));
         return object;
     }
 

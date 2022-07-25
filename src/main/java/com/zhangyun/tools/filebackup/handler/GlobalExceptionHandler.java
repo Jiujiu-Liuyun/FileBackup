@@ -20,8 +20,8 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = { Exception.class })
     public GlobalResponse exception(Exception e) {
-//        log.error("发生异常 {}",e.getMessage(), e);
-        return GlobalResponse.fail(e.getMessage());
+        log.error("发生异常 {}",e.getMessage(), e);
+        return GlobalResponse.fail();
     }
 
 }

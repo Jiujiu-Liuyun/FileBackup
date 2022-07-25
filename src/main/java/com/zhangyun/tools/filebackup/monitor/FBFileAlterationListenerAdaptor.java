@@ -1,11 +1,8 @@
 package com.zhangyun.tools.filebackup.monitor;
 
-import cn.hutool.core.util.ObjectUtil;
 import com.zhangyun.tools.filebackup.annotation.FBFileFilter;
-import com.zhangyun.tools.filebackup.annotation.TraceLog;
-import com.zhangyun.tools.filebackup.property.FBFileMonitorProperty;
+import com.zhangyun.tools.filebackup.annotation.InfoLog;
 import com.zhangyun.tools.filebackup.service.FBFileService;
-import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.monitor.FileAlterationListenerAdaptor;
 import org.apache.commons.io.monitor.FileAlterationObserver;
@@ -13,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.File;
-import java.io.IOException;
 
 /**
  * description: 文件变动事件处理器类
@@ -30,7 +26,7 @@ public class FBFileAlterationListenerAdaptor extends FileAlterationListenerAdapt
     private FBFileService fileService;
 
     @Override
-    @TraceLog
+    @InfoLog
     @FBFileFilter
     public void onFileChange(File source) {
         try {
@@ -43,7 +39,7 @@ public class FBFileAlterationListenerAdaptor extends FileAlterationListenerAdapt
     }
 
     @Override
-    @TraceLog
+    @InfoLog
     @FBFileFilter
     public void onFileCreate(File source) {
         try {
@@ -56,7 +52,7 @@ public class FBFileAlterationListenerAdaptor extends FileAlterationListenerAdapt
     }
 
     @Override
-    @TraceLog
+    @InfoLog
     @FBFileFilter
     public void onFileDelete(File source) {
         try {
@@ -69,7 +65,7 @@ public class FBFileAlterationListenerAdaptor extends FileAlterationListenerAdapt
     }
 
     @Override
-    @TraceLog
+    @InfoLog
     @FBFileFilter
     public void onDirectoryCreate(File source) {
         try {
@@ -82,7 +78,7 @@ public class FBFileAlterationListenerAdaptor extends FileAlterationListenerAdapt
     }
 
     @Override
-    @TraceLog
+    @InfoLog
     @FBFileFilter
     public void onDirectoryDelete(File source) {
         try {
@@ -94,4 +90,15 @@ public class FBFileAlterationListenerAdaptor extends FileAlterationListenerAdapt
         }
     }
 
+//    @Override
+//    public void onStart(FileAlterationObserver observer) {
+//        log.info("on start...");
+//        super.onStart(observer);
+//    }
+//
+//    @Override
+//    public void onStop(FileAlterationObserver observer) {
+//        log.info("on stop...");
+//        super.onStop(observer);
+//    }
 }

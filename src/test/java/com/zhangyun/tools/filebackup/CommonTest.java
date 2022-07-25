@@ -40,8 +40,22 @@ public class CommonTest {
 //
 //        FileUtils.copyDirectory(source,target);
 
-        File file = new File("/Users/zhangyun/test/source/demo/.DS_Store");
-        System.out.println(file.getName());
+//        File file = new File("/Users/zhangyun/.oh-my-zsh");
+//        System.out.println(file.getName());
+//        System.out.println(file.getPath());
+//        System.out.println(file.getAbsolutePath());
+//        System.out.println(Arrays.toString(file.list()));
+//        System.out.println(Arrays.toString(file.listFiles()));
+//        System.out.println(file.list().length);
+//        System.out.println(file.lastModified());
+
+//        File f1 = new File("/Users/zhangyun/test/source/demo/src");
+//        File f2 = new File("/Users/zhangyun/test/target/demo/src");
+//        FileUtils.copyDirectory(f1, f2);
+
+//        File f1 = new File("/Users/zhangyun/test/source/demo/target/classes/application.properties");
+//        File f2 = new File("/Users/zhangyun/test/target/demo/target/classes/application.properties");
+//        FileUtils.copyFile(f1, f2);
     }
 
     @Test

@@ -1,18 +1,16 @@
 package com.zhangyun.tools.filebackup.filevisitor;
 
 import cn.hutool.core.util.ObjectUtil;
+import com.zhangyun.tools.filebackup.annotation.FBFileFilter;
+import com.zhangyun.tools.filebackup.annotation.InfoLog;
 import com.zhangyun.tools.filebackup.annotation.Timer;
-import com.zhangyun.tools.filebackup.annotation.TraceLog;
 import com.zhangyun.tools.filebackup.exception.BlankArgumentsException;
+import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.nio.file.FileVisitResult;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.SimpleFileVisitor;
+import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 
 /**
@@ -24,49 +22,31 @@ import java.nio.file.attribute.BasicFileAttributes;
  */
 @Service
 @Slf4j
-public class CounterFileVisitor extends SimpleFileVisitor {
+@Data
+public class CounterFileVisitor extends SimpleFileVisitor<Path> {
 
     private Long dirCounter = 0L;
 
     private Long fileCounter = 0L;
 
     @Override
-    public FileVisitResult preVisitDirectory(Object dir, BasicFileAttributes attrs) throws IOException {
-
-        return super.preVisitDirectory(dir, attrs);
-    }
-
-    @Override
-    public FileVisitResult visitFile(Object file, BasicFileAttributes attrs) throws IOException {
+    @FBFileFilter
+    public FileVisitResult visitFile(Path source, BasicFileAttributes attrs) throws IOException {
         fileCounter++;
-        return super.visitFile(file, attrs);
+        return super.visitFile(source, attrs);
     }
 
     @Override
-    public FileVisitResult visitFileFailed(Object file, IOException exc) throws IOException {
+    public FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {
+        log.error("visit file {} failed! error message: {}", file, exc.getMessage(), exc);
         return super.visitFileFailed(file, exc);
     }
 
     @Override
-    public FileVisitResult postVisitDirectory(Object dir, IOException exc) throws IOException {
+    @FBFileFilter
+    public FileVisitResult postVisitDirectory(Path source, IOException exc) throws IOException {
         dirCounter++;
-        return super.postVisitDirectory(dir, exc);
-    }
-
-    public Long getDirCounter() {
-        return dirCounter;
-    }
-
-    public void setDirCounter(Long dirCounter) {
-        this.dirCounter = dirCounter;
-    }
-
-    public Long getFileCounter() {
-        return fileCounter;
-    }
-
-    public void setFileCounter(Long fileCounter) {
-        this.fileCounter = fileCounter;
+        return super.postVisitDirectory(source, exc);
     }
 
     /**
@@ -74,7 +54,8 @@ public class CounterFileVisitor extends SimpleFileVisitor {
      * @param path
      * @throws IOException
      */
-    @TraceLog
+    @InfoLog
+    @Timer
     public void getFileAndDirCounter(String path) throws IOException {
         if (ObjectUtil.isEmpty(path)) {
             log.error("文件目录计数器异常，路径位为空： {}", path);
@@ -83,5 +64,6 @@ public class CounterFileVisitor extends SimpleFileVisitor {
         setFileCounter(0L);
         setDirCounter(0L);
         Files.walkFileTree(Paths.get(path), this);
+        log.info("文件个数以及目录查询成功，file: {}个, dir: {}个", fileCounter, dirCounter);
     }
 }

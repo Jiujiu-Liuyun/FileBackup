@@ -1,7 +1,8 @@
 package com.zhangyun.tools.filebackup.service;
 
 import cn.hutool.core.util.ObjectUtil;
-import com.zhangyun.tools.filebackup.annotation.TraceLog;
+import com.zhangyun.tools.filebackup.annotation.DebugLog;
+import com.zhangyun.tools.filebackup.annotation.InfoLog;
 import com.zhangyun.tools.filebackup.exception.BlankArgumentsException;
 import com.zhangyun.tools.filebackup.exception.FBBusinessException;
 import com.zhangyun.tools.filebackup.property.FBFileMonitorProperty;
@@ -12,6 +13,8 @@ import org.springframework.stereotype.Service;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+
 /**
  * description:
  *
@@ -33,13 +36,13 @@ public class FBFileService {
      * @param target
      * @throws IOException
      */
-    @TraceLog
+    @InfoLog
     public void fileCopy(File source, File target) throws IOException {
         if (ObjectUtil.isEmpty(source) || ObjectUtil.isEmpty(target)) {
             throw new BlankArgumentsException("文件为空");
         }
         FileUtils.copyFile(source, target);
-        log.info("文件{} 已被复制到 文件{}", source, target);
+        log.info("文件复制成功！");
     }
 
     /**
@@ -49,25 +52,25 @@ public class FBFileService {
      * @param target
      * @throws IOException
      */
-    @TraceLog
+    @InfoLog
     public void dirCopy(File source, File target) throws IOException {
         if (ObjectUtil.isEmpty(source) || ObjectUtil.isEmpty(target)) {
             throw new BlankArgumentsException("目录为空");
         }
         FileUtils.copyDirectory(source, target);
-        log.info("目录{} 已被复制到 目录{}", source, target);
+        log.info("目录复制成功！");
     }
 
-    @TraceLog
+    @InfoLog
     public void fileAndDirDelete(File target) throws IOException {
         if (ObjectUtil.isEmpty(target)) {
             throw new BlankArgumentsException("目标文件为空，删除异常！");
         }
         FileUtils.delete(target);
-        log.info("{} 已被删除", target);
+        log.info("文件/目录删除成功！");
     }
 
-    @TraceLog
+    @DebugLog
     public File sourceMapToTarget(File source) {
         if (ObjectUtil.isEmpty(source)) {
             throw new BlankArgumentsException("目标文件为null，删除异常！");
@@ -78,9 +81,27 @@ public class FBFileService {
         }
         String targetPath = source.getPath().replace(
                 monitorProperty.getSourcePath(), monitorProperty.getTargetPath());
-        File target = new File(targetPath);
-        log.info("{} 已被映射到 {}", source, target);
-        return target;
+        return new File(targetPath);
+    }
+
+    private void recursionCopy(File source, File target) throws IOException {
+        if (target.exists()) {
+            return;
+        }
+        if (ObjectUtil.equal(source.getPath(), monitorProperty.getSourcePath())
+                || ObjectUtil.equal(target.getPath(), monitorProperty.getTargetPath())) {
+            log.error("递归复制失败, source: {}, target: {}", source, target);
+            return;
+        }
+        // 复制上一级目录
+        int index = source.getPath().lastIndexOf('/');
+        File newSource = new File(source.getPath().substring(0, index));
+        index = target.getPath().lastIndexOf('/');
+        File newTarget = new File(target.getPath().substring(0, index));
+        recursionCopy(newSource, newTarget);
+
+        // 复制该级目录
+        FileUtils.copyDirectory(source, target);
     }
 
 }

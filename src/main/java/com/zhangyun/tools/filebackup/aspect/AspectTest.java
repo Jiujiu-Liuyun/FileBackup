@@ -1,8 +1,7 @@
 package com.zhangyun.tools.filebackup.aspect;
 
-import com.zhangyun.tools.filebackup.annotation.FBExceptionHandler;
 import com.zhangyun.tools.filebackup.annotation.Timer;
-import com.zhangyun.tools.filebackup.annotation.TraceLog;
+import com.zhangyun.tools.filebackup.annotation.InfoLog;
 import com.zhangyun.tools.filebackup.exception.BlankArgumentsException;
 import org.springframework.stereotype.Service;
 
@@ -22,7 +21,7 @@ public class AspectTest {
         Thread.sleep(1234);
     }
 
-    @TraceLog
+    @InfoLog
     public void testExceptionHandler(String str) {
         tt();
     }

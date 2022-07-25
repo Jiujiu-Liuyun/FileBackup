@@ -33,9 +33,8 @@ public class FBFileFilterAspect {
     private List<String> fileIgnoreList = null;
 
     @Pointcut("@annotation(com.zhangyun.tools.filebackup.annotation.FBFileFilter) && " +
-            "execution(* com.zhangyun.tools.filebackup.monitor.FBFileAlterationListenerAdaptor.*(..))")
+            "execution(* com.zhangyun.tools.filebackup..*.*(..))")
     public void pointcut() {
-
     }
 
     @Around("pointcut() && args(source)")
