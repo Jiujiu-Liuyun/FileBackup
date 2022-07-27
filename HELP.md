@@ -11,3 +11,6 @@ For further reference, please consider the following sections:
 ## 系统框架
 ### 文件备份1.0
 ![img.png](.assets/img.png)
+
+### 文件备份2.0
+![img.png](.assets/文件备份v2.0.png)
